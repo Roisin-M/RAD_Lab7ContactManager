@@ -1,0 +1,58 @@
+﻿@page
+@model ContactManager.Pages.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>contact</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.contact.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.contact.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.contact.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.contact.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.contact.City)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.contact.City)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.contact.State)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.contact.State)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.contact.Zip)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.contact.Zip)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.contact.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.contact.Email)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="contact.ContactId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
